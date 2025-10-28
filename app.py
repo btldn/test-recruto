@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 @app.get("/")
 def hello():
-    name = request.args.get("name", "Recruto").strip()
-    message = request.args.get("message", "Давай дружить").strip()
+    name = request.args.get("name", "Гость").strip()
+    message = request.args.get("message", "Здравствуй").strip()
     text = f"Hello {name}! {message}!"
     return Response(text, mimetype="text/plain; charset=utf-8")
 
